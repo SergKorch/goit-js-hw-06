@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imgList = images.map(img=>{
+  const imgElement = document.createElement('img');
+  imgElement.src=img.url;
+  imgElement.alt=img.alt;
+  return imgElement;
+
+})
+console.log(...imgList)
+const imEl=document.querySelector('.gallery');
+imEl.append(...imgList)
