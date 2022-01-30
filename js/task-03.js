@@ -18,7 +18,6 @@ const imgList = images.map(img=>{
   imgElement.src=img.url;
   imgElement.alt=img.alt;
   return imgElement;
-
 })
 console.log(...imgList)
 const imEl=document.querySelector('.gallery');
