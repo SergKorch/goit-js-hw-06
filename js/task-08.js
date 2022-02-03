@@ -8,9 +8,9 @@ function onForm(event) {
   formData.forEach((value, name) => {
     if (value === "" || name === "") {
       return alert("Все поля должны быть заполнены");
-    }
+    } else {}
     console.log("name=", name);
     console.log("value=", value);
-    event.currentTarget.reset();
+    event.currentTarget.reset();}
   });
 }
