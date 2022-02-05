@@ -12,21 +12,10 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-// const imgList = images.map((img) => {
-//   const imgElement = document.createElement("img");
-//   imgElement.src = img.url;
-//   imgElement.alt = img.alt;
-//   return imgElement;
-// });
-// console.log(...imgList);
-// const imEl = document.querySelector(".gallery");
-// imEl.append(...imgList);
 
-// 
-
-const imgList = document.querySelector('.gallery')
-
+const imgList = document.querySelector('.gallery');
+const li=[];
 const imgEl = images.map(({url,alt}) => {
-  return imgList.insertAdjacentHTML('beforeend', 
-  `<li class='gallery'> <img src='${url}' alt='${alt}'> </li>`)
+  li.push(`<li class='gallery'> <img src='${url}' alt='${alt}'> </li>`)
 });
+imgList.insertAdjacentHTML('beforeend', li);
