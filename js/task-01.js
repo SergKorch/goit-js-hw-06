@@ -6,6 +6,3 @@ categories.forEach((categEl) => {
   console.log("Elements:", categEl.querySelectorAll("li").length);
 });
 
-// magicBtn.addEventListener('click', ()=>{
-
-// });
