@@ -5,7 +5,7 @@ function onForm(event) {
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
-  console.log("===", formData);
+
   formData.forEach((value, name) => {
     if (value === "" || name === "") {
       return alert("Все поля должны быть заполнены");
