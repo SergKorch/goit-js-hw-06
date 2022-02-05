@@ -10,8 +10,8 @@ const btn = document.querySelector(".change-color");
 const span = document.querySelector("span");
 
 btn.addEventListener("click", getHexColor);
-function getHexColor () {
-form.style.backgroundColor = getRandomHexColor();
-span.textContent=form.style.backgroundColor
-console.log(getRandomHexColor());
+function getHexColor() {
+  form.style.backgroundColor = getRandomHexColor();
+  span.textContent = form.style.backgroundColor;
+  console.log(getRandomHexColor());
 }
