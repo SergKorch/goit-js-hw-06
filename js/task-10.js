@@ -1,26 +1,41 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
-
-// Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
-
-// <div id="controls">
-//   <input type="number" min="1" max="100" step="1" />
-//   <button type="button" data-create>Create</button>
-//   <button type="button" data-destroy>Destroy</button>
-// </div>
-
-// <div id="boxes"></div>
-// Создай функцию createBoxes(amount), которая принимает один параметр - число. Функция создает столько <div>, сколько указано в amount и добавляет их в div#boxes.
-
-// Размеры самого первого <div> - 30px на 30px.
-// Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
-// Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
 // function getRandomHexColor() {
 //   return `#${Math.floor(Math.random() * 16777215)
 //     .toString(16)
 //     .padStart(6, 0)}`;
 // }
-// Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
+// const divSection = document.querySelector('#boxes');
+// const divElAll=[];
+
+// function addDiv ()  {
+// const divEl=document.createElement("div");
+// console.log(divEl);
+// divElAll.push(divEl);
+// }
+
+// const button = document.querySelector(".btn");
+
+// console.log(divSection);
+// divSection.append(...divElAll)
+
+// const  createBoxes = amount => {
+
+// };
+const btns = document.querySelectorAll("button");
+console.log(...btns);
+// let currentValue = 0;
+btns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const action = this.dataset.action;
+  //     const span = this.parentElement.querySelector("#value");
+  //    currentValue = +span.textContent;
+  //     let newValue;
+  if (action === "create") {
+    const divEl = document.createElement("div");
+    console.log(divEl);
+    divElAll.push(divEl);
+  } else if ((action === "destroy")) {
+        divElAll.remove();
+  }
+  //     span.textContent = newValue;
+});
+// });
